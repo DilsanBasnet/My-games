@@ -1,0 +1,146 @@
+/* Style Time Students . */
+:root {
+    --primary: rgb(58, 58, 193);
+    --dark: black;
+    --light: rgb(240, 236, 236);
+    --shadow: 1 3px 20px rgba(0, 0, 0, 0.2);
+}
+
+body {
+    font-family: sans-serif;
+    background-color: var(--light);
+    margin: 0;
+    color: var(--dark);
+}
+
+header {
+    background: rgb(202, 193, 193);
+    padding: 1rem 6%;
+    box-shadow: var(--shadow);
+    position: sticky;
+    top: 0;
+    z-index: 2;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.logo {
+    font-size: 2rem;
+    font-weight: bolder;
+    color: rgb(6, 5, 5);
+}
+
+#subjectSearch {
+    padding: 10px 20px;
+    border: 1px solid black;
+    width: 260px;
+    border-radius: 20px;
+}
+
+.hero {
+    text-align: center;
+    padding: 60px 20px;
+    color: white;
+}
+.subject-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+    padding: 42px 6%;
+    gap: 23px;
+}
+
+.card {
+    background: white;
+    border-radius: 14px;
+    transition: transform 0.3s ease, box-shadow 0.2s ease;
+    box-shadow: var(--shadow);
+    overflow: hidden;
+
+}
+
+.card-content {
+    padding: 22px;
+    text-align: center;
+}
+
+.card:hover{
+    transform: translateY(-11px);
+    box-shadow: 0 11px 31px rgba(0, 0, 0, 0.20)
+}
+
+.card img {
+    width: 100%;
+    height: 190px;
+    object-fit: cover;
+}
+
+.btn {
+    display: inline-block;
+    color: white;
+    background: var(--primary);
+    text-decoration: none;
+    padding: 11px 22px;
+    border-radius: 8px;
+    margin-top: 11px;
+    font-weight: bold;
+    
+}
+    
+footer {
+    text-align: center;
+    background: var(--dark);
+    padding: 42px;
+    color: white;
+}
+
+/* pdf background  */
+
+.modal {
+    display: none;
+    position:fixed;
+    z-index: 3;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    backdrop-filter: blur(6px);
+    
+}
+
+.modal-content {
+    margin: 2% auto;
+    width: 80%;
+    height: 90%;
+    background-color: #c8c5c5;
+    display: flex;
+    border-radius: 14px;
+    flex-direction: column;
+    overflow: hidden;
+
+}
+.modal-header {
+    padding: 16px 26px;
+    color: white;
+    background: var(--dark);
+    display: flex;
+    justify-content: space-between;
+}
+.close-btn {
+    cursor: pointer;
+    font-size: 28px;
+}
+#pdfFrame {
+    width: 100%;
+    flex-grow: 1;
+}
+.model-footer {
+    padding: 10px;
+    text-align: center;
+    background: rgb(33, 32, 32);
+    font-size: 1rem;
+}
